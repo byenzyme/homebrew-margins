@@ -4,11 +4,11 @@ class Margins < Formula
   license "Apache-2.0"
 
   if Hardware::CPU.arm?
-    url "https://github.com/useenzyme/margins/releases/download/v0.1.0/margins-0.1.0-aarch64-apple-darwin.tar.gz"
-    sha256 "3e04082ad6284b57049d9986e21d4c0600d03cfe7679fafa2641beb21d2ed535"
+    url "https://github.com/useenzyme/margins/releases/download/v0.3.0/margins-0.3.0-aarch64-apple-darwin.tar.gz"
+    sha256 "2a80d0f66426c040edb6714fe2d85ba46003f7a17e01db4fd973ec3434d01cde"
   else
-    url "https://github.com/useenzyme/margins/releases/download/v0.1.0/margins-0.1.0-x86_64-apple-darwin.tar.gz"
-    sha256 "798a6b4fdae00ed4c99dcc9475d32083a2c0add5d45a173e59ee446fcff9834a"
+    url "https://github.com/useenzyme/margins/releases/download/v0.3.0/margins-0.3.0-x86_64-apple-darwin.tar.gz"
+    sha256 "3063d8046a5b519f3c9856f9155c75b4a982aeab74d34bb889f4e4e2aea10561"
   end
 
   depends_on :macos
@@ -18,6 +18,6 @@ class Margins < Formula
   end
 
   test do
-    assert_match "Usage:", shell_output("#{bin}/margins --help")
+    assert_match "Usage:", shell_output("#{bin}/margins --help 2>&1", 2)
   end
 end

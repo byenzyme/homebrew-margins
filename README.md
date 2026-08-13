@@ -1,9 +1,9 @@
 # Enzyme Homebrew tap
 
-This tap distributes the public [Margins CLI](https://github.com/useenzyme/margins).
+This tap distributes the public [Margins CLI](https://github.com/byenzyme/margins).
 
 ```bash
-brew install useenzyme/margins/margins
+brew install byenzyme/margins/margins
 ```
 
 `Formula/margins.rb` is generated from signed-off release artifacts by the

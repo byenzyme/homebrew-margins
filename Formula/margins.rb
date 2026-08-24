@@ -3,14 +3,29 @@ class Margins < Formula
   homepage "https://github.com/byenzyme/margins"
   license "Apache-2.0"
 
-  url "https://github.com/byenzyme/margins/releases/download/v0.4.3/margins-0.4.3-aarch64-apple-darwin.tar.gz"
-  sha256 "1d5d4177d4fd431f852da16313ea596e9c287b6415ba260a656a238adf811f94"
+  url "https://github.com/byenzyme/margins/releases/download/v0.4.4/margins-0.4.4-aarch64-apple-darwin.tar.gz"
+  sha256 "fd3c7fb6a458e5033b2596b53004fb2d40094b4edbbb16e9ae1986af61543ef0"
 
   depends_on :macos
   depends_on arch: :arm64
 
   def install
     bin.install "margins"
+  end
+
+  def caveats
+    <<~EOS
+      Next step — finish setup (one time):
+        margins setup   # downloads local models and installs the agent skills
+                        # (/margins, /watermark) into Claude Code, Codex, and Cursor
+
+      Then:
+        margins new     # record a meeting
+        margins note    # turn the latest meeting into a note in your agent
+
+      To capture computer audio, grant your terminal "Screen & System Audio
+      Recording" in System Settings > Privacy & Security, then restart it.
+    EOS
   end
 
   test do

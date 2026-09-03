@@ -3,8 +3,8 @@ class Margins < Formula
   homepage "https://github.com/byenzyme/margins"
   license "Apache-2.0"
 
-  url "https://github.com/byenzyme/margins/releases/download/v0.4.6/margins-0.4.6-aarch64-apple-darwin.tar.gz"
-  sha256 "cb8efb65477e45c7a5294fa056ab1e60e6cb91563558629092b8a1de94d7a6be"
+  url "https://github.com/byenzyme/margins/releases/download/v0.4.7/margins-0.4.7-aarch64-apple-darwin.tar.gz"
+  sha256 "4d0ed84c64965b547161bf1bb591e05cb81d364fa392280c2e84c58b627c9636"
 
   depends_on :macos
   depends_on arch: :arm64

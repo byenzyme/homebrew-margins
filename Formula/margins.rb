@@ -3,8 +3,8 @@ class Margins < Formula
   homepage "https://github.com/byenzyme/margins"
   license "Apache-2.0"
 
-  url "https://github.com/byenzyme/margins/releases/download/v0.4.18/margins-0.4.18-aarch64-apple-darwin.tar.gz"
-  sha256 "eb7ecd78dc6c8aa39314753b788acfdb48a5832509273924548dd3e5f73a05c0"
+  url "https://github.com/byenzyme/margins/releases/download/v0.4.19/margins-0.4.19-aarch64-apple-darwin.tar.gz"
+  sha256 "011310507c67ad009b5df2018f7ba2600758b8744740d007cca620dde6acf687"
 
   depends_on :macos
   depends_on arch: :arm64
@@ -33,6 +33,6 @@ class Margins < Formula
 
   test do
     assert_match "Usage:", shell_output("#{bin}/margins --help 2>&1", 2)
-    assert_equal "enzyme 0.12.1\n", shell_output("#{libexec}/margins/enzyme --version")
+    assert_equal "enzyme 0.12.2\n", shell_output("#{libexec}/margins/enzyme --version")
   end
 end
